@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 
 import markersJSON from "../../assets/data.json";
 import positionsJSON from "../../assets/positions.json";
+import CustomMarker from "./Markers/CustomMarker";
 
 const Map = () => {
   const [visibleMarkers, setVisibleMarkers] = useState<{ [key: number]: boolean }>({});
@@ -24,7 +25,7 @@ const Map = () => {
   const Sidebar = () => {
     return (
       <div style={{ position: "fixed", width: "200px", bottom: 0, padding: "10px", zIndex: 999999 }}>
-        <h2>Markers</h2>
+        <h1>Markers</h1>
 
         {markersJSON.map((markerJSON) => (
           <div key={markerJSON.name}>
@@ -49,7 +50,9 @@ const Map = () => {
       <MapContainer crs={CRS.Simple} maxZoom={8} zoom={2} center={[-88.25, 117.25]} attributionControl={false} style={{ height: "100vh", width: "100vw" }}>
         <TileLayer minNativeZoom={3} maxNativeZoom={5} noWrap={true} url="tiles/{z}/{x}/{y}.png" />
 
-        {positionsJSON.map((position) => visibleMarkers[position.id] && <Marker position={[position.position.x, position.position.y]} />)}
+        {/* default markers don't show in vercel */}
+        {/* {positionsJSON.map((position) => visibleMarkers[position.id] && <Marker position={[position.position.x, position.position.y]} />)} */}
+        {positionsJSON.map((position) => visibleMarkers[position.id] && <CustomMarker x={position.position.x} y={position.position.y} />)}
       </MapContainer>
     </div>
   );
