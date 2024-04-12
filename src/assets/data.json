@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Coffre",
+    "icon": "chests.png",
+    "items": [
+      {
+        "id": 304,
+        "name": "Koï doré",
+        "found": 0,
+        "total": 7
+      },
+      {
+        "id": 305,
+        "name": "Koï rouillé",
+        "found": 0,
+        "total": 7
+      },
+      {
+        "id": 311,
+        "name": "Poisson-globe",
+        "found": 0,
+        "total": 5
+      },
+      {
+        "id": 312,
+        "name": "Poisson-globe amer",
+        "found": 0,
+        "total": 5
+      }
+    ]
+  },
+  {
+    "name": "Pêche",
+    "icon": "fishing.png",
+    "items": [
+      {
+        "id": 17,
+        "name": "Coffre Ordinaire",
+        "found": 306,
+        "total": 1160
+      },
+      {
+        "id": 18,
+        "name": "Coffre délicat",
+        "found": 104,
+        "total": 773
+      },
+      {
+        "id": 19,
+        "name": "Coffre précieux",
+        "found": 12,
+        "total": 288
+      },
+      {
+        "id": 20,
+        "name": "Coffre luxueux",
+        "found": 7,
+        "total": 138
+      },
+      {
+        "id": 21,
+        "name": "Coffre étrange",
+        "found": 17,
+        "total": 241
+      }
+    ]
+  }
+]

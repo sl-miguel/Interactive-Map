@@ -1,0 +1,7 @@
+[
+  { "id": 304, "title": "Koï doré", "content": "Don't forget it takes 3 days to reset", "position": { "x": -90.25, "y": 113.25 } },
+  { "id": 305, "title": "Koï rouillé", "content": "Don't forget it takes 3 days to reset", "position": { "x": -96.25, "y": 117 } },
+  { "id": 304, "title": "Koï doré", "content": "Don't forget it takes 3 days to reset", "position": { "x": -92, "y": 111 } },
+  { "id": 20, "title": "Coffre", "content": "Montez la coline", "position": { "x": -97, "y": 130 } },
+  { "id": 17, "title": "Chest", "content": "Battre les slimes", "position": { "x": -90, "y": 103 } }
+]
