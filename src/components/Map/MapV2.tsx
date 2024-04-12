@@ -1,6 +1,6 @@
-import { MapContainer, TileLayer, Marker, useMapEvent } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { useEffect, useState } from "react";
-import L, { CRS } from "leaflet";
+import { CRS } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 import markersJSON from "../../assets/data.json";
@@ -20,27 +20,6 @@ const Map = () => {
   useEffect(() => {
     console.log("Visible Markers", visibleMarkers);
   }, [visibleMarkers]);
-
-  const ControllingGroup = () => {
-    // @ts-ignore
-    const map = useMapEvent({
-      overlayadd(e: any) {
-        // @ts-ignore
-        let bounds = new L.LatLngBounds();
-        console.log("Event", e);
-
-        map.eachLayer((layer) => {
-          if (layer instanceof L.FeatureGroup) {
-            bounds.extend(layer.getBounds());
-          }
-        });
-
-        // if (bounds.isValid()) map.flyToBounds(bounds);
-      },
-    });
-
-    return null;
-  };
 
   const Sidebar = () => {
     return (
@@ -71,8 +50,6 @@ const Map = () => {
         <TileLayer minNativeZoom={3} maxNativeZoom={5} noWrap={true} url="tiles/{z}/{x}/{y}.png" />
 
         {positionsJSON.map((position) => visibleMarkers[position.id] && <Marker position={[position.position.x, position.position.y]} />)}
-
-        <ControllingGroup />
       </MapContainer>
     </div>
   );
